@@ -1,26 +1,27 @@
 import React from 'react'
 import { FiSearch } from 'react-icons/fi';
+import {BiSolidUserCircle} from 'react-icons/bi'
 const Header = () => {
   return (
     <div>
     <nav>
     <div className="p-2 flex justify-between items-center">
-            <div className='flex items-center justify-between w-2/4  '>
+            <div className='flex items-center justify-between md:w-2/4 w-full  '>
                <div className='w-20 h-10 overflow-hidden'>
                 <img src="/cognizantpng.png" className='w-full h-full bg-cover' alt="logo" />
                </div>
-               <div className='flex items-center justify-between bg-gray-200 p-2 w-full ml-10 rounded-md  inner-shadow-md'>
+               <div className='flex items-center justify-between bg-gray-200 p-2 md:w-full w-fit md:ml-10 ml-0 rounded-md  inner-shadow-md'>
                    <input type="text" className='w-full h-full bg-transparent border-none focus:border-none focus:outline-none ' />
                    <FiSearch className='w-5 h-5' />
                </div>
-            
+               <BiSolidUserCircle className='w-8 h-8 md:hidden visible'/>
             </div>
-            <div  className='flex gap-10 items-center'>
-              <a href='#' className='font-semibold text-sm'>Contact Us</a>
+            <div  className=' gap-10 items-center md:flex hidden'>
+              <a href='#' className='font-semibold text-md'>Contact Us</a>
               <button className="bg-transparent   py-2 px-4 border border-gray-500 rounded">
     Sign up
   </button>
-  <button className="bg-transparent    py-2 px-4 border border-gray-500 rounded">
+  <button className="bg-transparent     py-2 px-4 border border-gray-500 rounded">
     Sign in
   </button>
             </div>
